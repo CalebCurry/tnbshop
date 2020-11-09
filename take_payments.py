@@ -14,12 +14,11 @@ def get_balance(address):
 
 
 signing_key = SigningKey.generate()
-print(bytes(signing_key).hex())
+#don't show this to anyone lol print(bytes(signing_key).hex())
 print(bytes(signing_key.verify_key).hex())
 # https://stackoverflow.com/questions/57183362/pynacl-printing-privatekey-raw-hex-value
-# http://54.183.17.224/accounts/d84543947090d300910f8d1b9604c0c0a56fafca6cfbe52511c1e31757188bca/balance
 address = bytes(signing_key.verify_key).hex()
-#address = "d84543947090d300910f8d1b9604c0c0a56fafca6cfbe52511c1e31757188bca"
+#example address #address = "d84543947090d300910f8d1b9604c0c0a56fafca6cfbe52511c1e31757187bac"
 
 
 cost = 5 - 2
